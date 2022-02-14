@@ -38,13 +38,12 @@ public class PracticeFormTest {
         $("#subjectsInput").setValue("Maths").pressEnter();
         $(byText("Sports")).click();
         $(byText("Music")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/java/tests/test.jpg"));
+        $("#uploadPicture").uploadFromClasspath("testscreen.jpg");
         $("#currentAddress").setValue("ulica pusklina, dom kolotushkina");
         $("#react-select-3-input").setValue("Haryana").pressEnter();
         $("#react-select-4-input").setValue("Panipat").pressEnter();
 
         $("#submit").click();
-
 
         $(".table-responsive").shouldHave(text("Ivan Ivanova"),
                 text("ya@tisobaka.com"),
@@ -53,11 +52,9 @@ public class PracticeFormTest {
                 text("04 November,1993"),
                 text("Chemistry, Maths"),
                 text("Sports, Music"),
-                text("test.jpg"),
+                text("testscreen.jpg"),
                 text("ulica pusklina, dom kolotushkina"),
                 text("Haryana Panipat"));
-
-
     }
 }
 
