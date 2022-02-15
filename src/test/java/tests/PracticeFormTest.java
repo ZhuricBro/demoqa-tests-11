@@ -43,6 +43,7 @@ public class PracticeFormTest {
 
         $("#submit").click();
 
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(text("Ivan Ivanova"),
                 text("ya@tisobaka.com"),
                 text("Other"),
