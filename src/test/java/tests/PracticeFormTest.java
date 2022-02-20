@@ -37,7 +37,7 @@ public class PracticeFormTest {
         $(byText("Sports")).click();
         $(byText("Music")).click();
         $("#uploadPicture").uploadFromClasspath("testscreen.jpg");
-        $("#currentAddress").setValue("ulica pusklina, dom kolotushkina");
+        $("#currentAddress").setValue("ulica pushkina, dom kolotushkina");
         $("#react-select-3-input").setValue("Haryana").pressEnter();
         $("#react-select-4-input").setValue("Panipat").pressEnter();
 
@@ -52,7 +52,7 @@ public class PracticeFormTest {
                 text("Chemistry, Maths"),
                 text("Sports, Music"),
                 text("testscreen.jpg"),
-                text("ulica pusklina, dom kolotushkina"),
+                text("ulica pushkina, dom kolotushkina"),
                 text("Haryana Panipat"));
     }
 }
