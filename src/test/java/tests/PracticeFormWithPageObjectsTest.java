@@ -3,6 +3,7 @@ package tests;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
+
 public class PracticeFormWithPageObjectsTest extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
@@ -25,9 +26,30 @@ public class PracticeFormWithPageObjectsTest extends TestBase {
 
     @Test
     void PracticeForm() {
-        registrationPage.openPage().setFirstName(firstname).setLastName(lastname).setUserEmail(userEmail).setGender(gender).setUserNumber(userNumber).setBirthDate(day, month, year).setSubject1(subject1).setSubject2(subject2).setHobby1(hobby1).setHobby2(hobby2).setUploadPicture(myPicture).setCurrentAddress(myAddress).setState(myState).setCity(myCity).setSubmit();
+        registrationPage.openPage()
+                .setFirstName(firstname)
+                .setLastName(lastname)
+                .setUserEmail(userEmail)
+                .setGender(gender)
+                .setUserNumber(userNumber)
+                .setBirthDate(day, month, year)
+                .setSubjects(subject1, subject2)
+                .setHobbies(hobby1, hobby2)
+                .setUploadPicture(myPicture)
+                .setCurrentAddress(myAddress)
+                .setState(myState)
+                .setCity(myCity)
+                .setSubmit();
 
-        registrationPage.checkForm("Student name", firstname + " " + lastname).checkForm("Student Email", userEmail).checkForm("Gender", gender).checkForm("Mobile", userNumber).checkForm("Date of Birth", day + " " + month + "," + year).checkForm("Subjects", subject1 + ", " + subject2).checkForm("Hobbies", hobby1 + ", " + hobby2).checkForm("Picture", myPicture).checkForm("Address", myAddress).checkForm("State and City", myState + " " + myCity);
+        registrationPage.checkForm("Student name", firstname + " " + lastname)
+                .checkForm("Student Email", userEmail)
+                .checkForm("Gender", gender)
+                .checkForm("Mobile", userNumber)
+                .checkForm("Date of Birth", day + " " + month + "," + year)
+                .checkForm("Subjects", subject1 + ", " + subject2)
+                .checkForm("Hobbies", hobby1 + ", " + hobby2)
+                .checkForm("Picture", myPicture).checkForm("Address", myAddress)
+                .checkForm("State and City", myState + " " + myCity);
 
 
     }

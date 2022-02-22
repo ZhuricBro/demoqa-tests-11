@@ -72,28 +72,16 @@ public class RegistrationPage {
 
     }
 
-    public RegistrationPage setSubject1(String subject1) {
+    public RegistrationPage setSubjects(String subject1, String subject2) {
         subjectsInput.setValue(subject1).pressEnter();
-
-        return this;
-
-    }
-
-    public RegistrationPage setSubject2(String subject2) {
         subjectsInput.setValue(subject2).pressEnter();
 
         return this;
 
     }
 
-    public RegistrationPage setHobby1(String hobby1) {
+    public RegistrationPage setHobbies(String hobby1, String hobby2) {
         hobbiesWrapper.$(byText("Sports")).click();
-
-        return this;
-
-    }
-
-    public RegistrationPage setHobby2(String hobby2) {
         hobbiesWrapper.$(byText("Music")).click();
 
         return this;
@@ -133,10 +121,9 @@ public class RegistrationPage {
 
 
     public RegistrationPage setSubmit() {
-        submitClick.click();
+        submitClick.pressEnter();
 
         return this;
-
     }
 
     public RegistrationPage setBirthDate(String day, String month, String year) {
